@@ -88,6 +88,7 @@ section {
     width: 100%;
     height: 300px;
     display: flex;
+    text-align: center;
     justify-content: center;
     align-items: center;
     background-image: url(../assets/images/simon-berger-twukN12EN7c-unsplash.jpg);
@@ -167,4 +168,43 @@ footer {
     justify-content: center;
     align-items: center;
     background-color: var(--background-color-1);
+}
+
+/* #################################################################################### */
+/* MEDIA CSS */
+
+@media only screen and (max-width: 1300px) {
+    .gallery-picture {
+        width: 100%;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: var(--margin-1);
+    }
+
+    .hobbies-content {
+        max-width: 1300px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 3rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .gallery-picture {
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-gap: var(--margin-1);
+    }
+
+    .gallery-container img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: unset;
+        transition: unset;
+    }
+
+    .gallery-container img:hover {
+        transform: unset;
+    }
 }
